@@ -20,23 +20,23 @@ Go to Local terminal
 Give Permission
 sudo -s
 #### Move text file from cluster
-scp -r /home/venkat/Desktop/Bigdatatraining/file.txt root@192.168.13.11:/root/bigdata
+scp -r /home/venkat/Desktop/Bigdatatraining/file.xml root@192.168.13.11:/root/bigdata
 #### Move jar file from cluster
 scp /home/venkat/Desktop/Bigdatatraining/MapR.jar root@192.168.13.11:/root/bigdata
 ### Step 5:
 #### Move file from  Cluster node to HDFS
 #### Go to Cluster terminal
 #### Move text file from cluster to HDFS
-hdfs dfs -put root/bigdata/wordcountfile1.txt /user/BigData
+hdfs dfs -put root/bigdata/file.xml /user/BigData
 ### Step 6:
 #### Run jar file from cluster to HDFS
 (hadoop jar jarfilename.jar packageName.ClassName  PathToInputTextFile PathToOutputDirectry)
 
-hadoop jar bigdata/MapR.jar com.mapReduce.MapWordCount /user/BigData/wordcountfile1.txt /user/BigData/out
+hadoop jar bigdata/XmlMR.jar com.xmlparser.XMLDriver /user/BigData/file.xml /user/BigData/out
 ### Step 7:
 #### View the Out file Folder
-hadoop fs -ls /user/BigData/out1
+hadoop fs -ls /user/BigData/out
 ### Step 8:
 #### View the Output file
-hadoop fs -cat /user/BigData/out1/part-r-00000
+hadoop fs -cat /user/BigData/out/part-r-00000
 ## End..
