@@ -11,7 +11,7 @@ One is Local System another one is Cluster node
 #### First Create Directory in Cluster node
 Go to Cluster terminal
 #### Login to Cluster node
-ssh root@192.168.11.11
+ssh root@192.168.13.11
 #### Create Directory
 mkdir bigdata
 ### Step 4:
@@ -20,9 +20,9 @@ Go to Local terminal
 Give Permission
 sudo -s
 #### Move text file from cluster
-scp -r /home/venkat/Desktop/Bigdatatraining/file.txt root@192.168.11.11:/root/bigdata
+scp -r /home/venkat/Desktop/Bigdatatraining/file.txt root@192.168.13.11:/root/bigdata
 #### Move jar file from cluster
-scp /home/venkat/Desktop/Bigdatatraining/MapR.jar root@192.168.11.141:/root/bigdata
+scp /home/venkat/Desktop/Bigdatatraining/MapR.jar root@192.168.13.11:/root/bigdata
 ### Step 5:
 #### Move file from  Cluster node to HDFS
 #### Go to Cluster terminal
